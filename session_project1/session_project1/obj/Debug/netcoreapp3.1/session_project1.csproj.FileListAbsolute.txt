@@ -1,0 +1,5 @@
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.csproj.AssemblyReference.cache
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.AssemblyInfoInputs.cache
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.AssemblyInfo.cs
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.csproj.CoreCompileInputs.cache
