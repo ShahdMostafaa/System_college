@@ -5,32 +5,45 @@ using System.Text;
 
 namespace session_project1.OP_classes
 {
-    class Per_operations
+    class Per_operations : Peson_iterface
     {
         public void Add (List <Person> new_person)
         {
-            Console.Write("press " + "/n"+
-                "(1) To add Student " +"/n"+
-                "(2) To add Worker" +"/n"+
+            Console.Write("press \n " + 
+                "(1) To add Student \n" +
+                "(2) To add Worker \n" +
                 "(3) To add Instructore : ");
             string press = Console.ReadLine();
             Console.WriteLine();
 
-            Person person = new Person();
-            Console.Write("Enter The Name : ");
-            person.Name = Console.ReadLine();
-            Console.Write("Enter The Age : ");
-            string age = Console.ReadLine();
-            person.Age = int.Parse(age);
-            Console.Write("Enter The ID : ");
-            string id = Console.ReadLine();
-            person.ID = int.Parse(id);
-            Console.Write(" "); ///////////////////////////gender
-            
+            ////////////////////////////////////////////////////////
+
 
             if (press=="1")
             {
+                Person person = new Student();
                 Student st = person as Student;
+
+                Console.Write("Enter The Name : ");
+                person.Name = Console.ReadLine();
+                Console.Write("Enter The Age : ");
+                string age = Console.ReadLine();
+                person.Age = int.Parse(age);
+                Console.Write("Enter The ID : ");
+                string id = Console.ReadLine();
+                person.ID = int.Parse(id);
+                Console.Write("Press 0 for Male " +
+                    "1 for Female : ");
+                string Gender_input = Console.ReadLine();
+                person.gender = (Type)int.Parse(Gender_input);
+
+                Console.Write(" Press" +
+               " 1 for Information System\n" +
+                " 2 for Computer Since \n" +
+               " 3 for Information Technology \n" +
+               "  4 for Multi Media : ");
+                string input = Console.ReadLine();
+                st.Specialize = (Department)int.Parse(input);
                 Console.Write("Enter The GPA : ");
                 string gpa = Console.ReadLine();
                 st.Gpa = float.Parse(gpa);
@@ -38,7 +51,22 @@ namespace session_project1.OP_classes
             }
             if (press == "2")
             {
+                Person person = new Worker();
                 Worker Wr = person as Worker;
+
+                Console.Write("Enter The Name : ");
+                person.Name = Console.ReadLine();
+                Console.Write("Enter The Age : ");
+                string age = Console.ReadLine();
+                person.Age = int.Parse(age);
+                Console.Write("Enter The ID : ");
+                string id = Console.ReadLine();
+                person.ID = int.Parse(id);
+                Console.Write("Press 0 for Male " +
+                    "1 for Female : ");
+                string Gender_input = Console.ReadLine();
+                person.gender = (Type)int.Parse(Gender_input);
+
                 Console.Write("Enter The Salary : ");
                 string salary = Console.ReadLine();
                 Wr.Salary = float.Parse(salary);
@@ -46,7 +74,29 @@ namespace session_project1.OP_classes
             }
             if (press == "3")
             {
+                Person person = new Instructor();
                 Instructor In = person as Instructor;
+
+                Console.Write("Enter The Name : ");
+                person.Name = Console.ReadLine();
+                Console.Write("Enter The Age : ");
+                string age = Console.ReadLine();
+                person.Age = int.Parse(age);
+                Console.Write("Enter The ID : ");
+                string id = Console.ReadLine();
+                person.ID = int.Parse(id);
+                Console.Write("Press 0 for Male " +
+                    "1 for Female : ");
+                string Gender_input = Console.ReadLine();
+                person.gender = (Type)int.Parse(Gender_input);
+
+                Console.Write(" Press" +
+               " 1 for Information System\n" +
+                " 2 for Computer Since \n" +
+               " 3 for Information Technology \n" +
+               "  4 for Multi Media : ");
+                string input = Console.ReadLine();
+                In.Specialize = (Department)int.Parse(input);
                 Console.Write("Enter The Salary : ");
                 string salary = Console.ReadLine();
                 In.Salary = float.Parse(salary);
@@ -62,32 +112,31 @@ namespace session_project1.OP_classes
             string id = Console.ReadLine();
             int Id = int.Parse(id);
            for(int i = 0; i < pr.Count; i++)
-            {
-                Person p = pr[i];
-                if (p.ID == Id)
+           {
+                if (pr[i].ID == Id)
                 {
-                    if (p is Student)
+                    if (pr[i] is Student)
                     {
-                        Student st = p as Student;
-                        Console.WriteLine(p.ToString());
+                        Student st = pr[i] as Student;
+                        Console.WriteLine(st.ToString());
                         break;
                     }
-                    if (p is Worker)
+                    if (pr[i] is Worker)
                     {
-                        Worker Wr = p as Worker;
-                        Console.WriteLine(p.ToString());
+                        Worker Wr = pr[i] as Worker;
+                        Console.WriteLine(pr[i].ToString());
                         break;
                     }
-                    if (p is Instructor)
+                    if (pr[i] is Instructor)
                     {
-                        Instructor In = p as Instructor;
-                        Console.WriteLine(p.ToString());
+                        Instructor In = pr[i] as Instructor;
+                        Console.WriteLine(In.ToString());
                         break;
                     }
-                }
-                else
-                    Console.WriteLine("Not Found");
-            }
+                    else
+                        Console.WriteLine("Not Found");
+                } 
+           }
         }
 
         public void Delete (List<Person> Del_pr)
@@ -98,24 +147,24 @@ namespace session_project1.OP_classes
             for (int i = 0; i < Del_pr.Count; i++)
             {
                 Person p = Del_pr[i];
-                if (p.ID == Id)
+                if (Del_pr[i].ID == Id)
                 {
-                    if (p is Student)
+                    if (Del_pr[i] is Student)
                     {
-                        Student st = p as Student;
-                        Del_pr.Remove(p);
+                        Student st = Del_pr[i] as Student;
+                        Del_pr.Remove(st);
                         break;
                     }
-                    if (p is Worker)
+                    if (Del_pr[i] is Worker)
                     {
-                        Worker Wr = p as Worker;
-                        Del_pr.Remove(p);
+                        Worker Wr = Del_pr[i] as Worker;
+                        Del_pr.Remove(Wr);
                         break;
                     }
-                    if (p is Instructor)
+                    if (Del_pr[i] is Instructor)
                     {
-                        Instructor In = p as Instructor;
-                        Del_pr.Remove(p);
+                        Instructor In = Del_pr[i] as Instructor;
+                        Del_pr.Remove(In);
                         break;
                     }
                 }
@@ -127,11 +176,6 @@ namespace session_project1.OP_classes
 
      class list_Sort : IComparable <Person> 
     {
-        public int Compare(Person p1 , Person p2)
-        {
-
-        }
-
         int IComparable<Person>.CompareTo(Person other)
         {
             throw new NotImplementedException();

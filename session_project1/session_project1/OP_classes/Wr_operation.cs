@@ -13,42 +13,30 @@ namespace session_project1.OP_classes
     {
         public void sort_worker (List<Person> Wor)
         {
-            Person PW = new Person();
-            Worker w = PW as Worker;
-           for (int i = 0; i < Wor.Count; i++)
-           {
-                Person p1 = Wor[i];
-                if (p1 is Worker)
-                {
-                    double Sal1 = (p1 as Worker).Salary;
-                    for (int j = 0; j < Wor.Count; j++)
-                    {
-                        Person p2 = Wor[j];
-                        if (p2 is Worker)
-                        {
-                            double Sal2 = (p2 as Worker).Salary;
-                            
-                            if (Sal1 < Sal2)
-                            {
-                                PW = p1;
-                                p1 = p2;
-                                p2 = PW;
-                            }
-                        }  
-                    }
-                    
-                }
-               
-           }
-
-           for(int i = 0; i < 3; i++ )
+            List<Worker> worker = new List<Worker>();
+            Worker temp = new Worker();
+            for( int i = 0; i < Wor.Count; i++ )
             {
-                Person pw = new Person();
-                if(pw is Worker)
+                if(Wor[i] is Worker)
                 {
-                    Worker W = pw as Worker;
-                    W.ToString();
+                    worker.Add((Worker)Wor[i]);
                 }
+            }
+            for(int i = 0; i < worker.Count; i++)
+            {
+                for (int j = 0; j < worker.Count; j++)
+                {
+                    if (worker[i].Salary < worker[j].Salary)
+                    {
+                        temp = worker[i];
+                        worker[i] = worker[j];
+                        worker[j] = temp;
+                    }
+                }
+            }
+            for(int i = 0; i < 3; i++)
+            {
+                worker[i].ToString();
             }
         }
 

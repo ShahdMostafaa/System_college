@@ -7,24 +7,29 @@ namespace session_project1.OP_classes
 {
     class In_operation
     {
-        public void print_Male (List <Person> Ins)
+        public void print_Male (List <Person> PI)
         {
-            
-            for (int i = 0; i < Ins.Count; i++)
-            {
-                Person pi = Ins[i];
-                if(pi is Instructor)
-                {
-                    Instructor In = pi as Instructor;
+            Console.WriteLine("Ente The Gende -> pess :" +
+                " (0) For Male : " +
+                "(1) For Female : ");
+            string read = Console.ReadLine();
+            int Gender = int.Parse(read);
 
-                    if (In.gender == Type.Male)
-                    {
-                        pi.ToString();
-                    }
-                }
-                
+            List<Instructor> Ins = new List<Instructor>();
+            for (int i = 0; i < PI.Count; i++)
+            {
+               if( PI[i] is Instructor)
+               {
+                    Ins.Add((Instructor)PI[i]);
+               }
             }
-               
+            for(int i = 0 ; i < Ins.Count ; i++)
+            {
+                if((int)Ins[i].gender==Gender)
+                {
+                    Ins[i].ToString();
+                }
+            }
         }
     }
 }

@@ -8,6 +8,16 @@ namespace session_project1.Def_classes
     {
 
         public float Gpa { get; set; }
-        public department Specialize { get; set; }
+        public Department Specialize { get; set; }
+
+        public override void Tostring()
+        {
+            Console.WriteLine($"Name : {Name} \n " +
+                $"Age : {Age} \n" +
+                $"ID : {ID}\n" +
+                $"Gender : {gender} \n" +
+                $"GPA : {Gpa} \n" +
+                $"Department : {Specialize}");
+        }
     }
 }
