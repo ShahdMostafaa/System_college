@@ -1,0 +1,14 @@
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.csproj.AssemblyReference.cache
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.AssemblyInfoInputs.cache
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.AssemblyInfo.cs
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.csproj.CoreCompileInputs.cache
+C:\Users\ITC\source\repos\session_project1\session_project1\bin\Debug\netcoreapp3.1\session_project1.exe
+C:\Users\ITC\source\repos\session_project1\session_project1\bin\Debug\netcoreapp3.1\session_project1.deps.json
+C:\Users\ITC\source\repos\session_project1\session_project1\bin\Debug\netcoreapp3.1\session_project1.runtimeconfig.json
+C:\Users\ITC\source\repos\session_project1\session_project1\bin\Debug\netcoreapp3.1\session_project1.runtimeconfig.dev.json
+C:\Users\ITC\source\repos\session_project1\session_project1\bin\Debug\netcoreapp3.1\session_project1.dll
+C:\Users\ITC\source\repos\session_project1\session_project1\bin\Debug\netcoreapp3.1\session_project1.pdb
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.dll
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.pdb
+C:\Users\ITC\source\repos\session_project1\session_project1\obj\Debug\netcoreapp3.1\session_project1.genruntimeconfig.cache
