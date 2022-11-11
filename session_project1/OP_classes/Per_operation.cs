@@ -176,6 +176,15 @@ namespace session_project1.OP_classes
 
      class list_Sort : IComparable <Person> 
     {
+        public void print()
+        {
+            Console.WriteLine("Choose what you want to sort " +
+                "1 Students" +
+                "2 Workers" +
+                "3 Instructors :  ");
+            string read = Console.ReadLine();
+            int choice = int.Parse(read);
+        }
         int IComparable<Person>.CompareTo(Person other)
         {
             throw new NotImplementedException();

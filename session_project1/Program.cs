@@ -16,7 +16,10 @@ namespace session_project1
                 "1 Add person\n" +
                 "2 Search for person\n" +
                 "3 Delete Person\n" +
-                "4 Sort any list : ");
+                "4 Sort any list" +
+                "6 " +
+                "7 " +
+                "8 Exit : ");
             string option = Console.ReadLine();
             int Option = int.Parse(option);
 
@@ -37,7 +40,7 @@ namespace session_project1
         static void Main(string[] args)
         {
             List<Person> people = new List<Person>();
-           
+            Run(people);
         }
     }
 }
